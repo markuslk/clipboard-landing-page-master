@@ -1,0 +1,323 @@
+/* General reset  */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+
+* {
+	margin: 0;
+
+	padding: 0;
+
+	font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+/* Set core root defaults */
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+/* Set core body defaults */
+
+body {
+	text-rendering: optimizeSpeed;
+	font-family: "Poppins", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img,
+picture {
+	max-width: 100%;
+
+	display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+
+		animation-iteration-count: 1 !important;
+
+		transition-duration: 0.01ms !important;
+
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Utility classes */
+
+:root {
+	--primary-cyan: hsl(171, 66%, 44%);
+	--primary-blue: hsl(233, 100%, 69%);
+	--neutral-blue: hsl(210, 10%, 33%);
+	--neutral-gray: hsl(201, 11%, 66%);
+}
+
+.container {
+	max-width: 70em;
+	margin-inline: auto;
+	text-align: center;
+	padding-inline: 2rem;
+}
+
+section {
+	margin-block: 8rem;
+}
+
+h2 {
+	font-size: 1.9rem;
+	font-weight: 500;
+	color: var(--neutral-blue);
+}
+
+p {
+	margin-block: 1rem;
+	color: var(--neutral-gray);
+	font-size: 1.15rem;
+	line-height: 1.8;
+	font-weight: 300;
+}
+
+section p {
+	margin-bottom: 4rem;
+}
+
+/* Header section */
+
+header {
+	background-image: url("/images/bg-header-mobile.png");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 3rem;
+}
+
+.logo {
+	margin-top: 5rem;
+	margin-inline: auto;
+	margin-bottom: 3rem;
+}
+
+header h1 {
+	font-size: 2.15rem;
+	font-weight: 500;
+	color: var(--neutral-blue);
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 4rem;
+}
+
+.btn {
+	padding: 1rem;
+	width: 100%;
+	max-width: 30rem;
+	color: #fff;
+	border-radius: 45px;
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease 0s;
+	outline: none;
+	background-color: var(--primary-cyan);
+}
+
+.btn-mac {
+	background-color: var(--primary-blue);
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+/* Main section */
+
+.computer-img {
+	margin-bottom: 4rem;
+	margin-inline: auto;
+}
+
+.icon-images {
+	margin: 3rem auto;
+	height: 45px;
+}
+
+.logo-section {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	gap: 6rem;
+	align-items: center;
+	justify-content: center;
+	margin-inline: auto;
+}
+
+/* Footer section */
+
+.footer-container {
+	background-color: hsla(202, 11%, 66%, 0.1);
+}
+
+footer {
+	padding: 4rem 2rem;
+	margin-inline: auto;
+	text-align: center;
+}
+
+.footer-logo {
+	width: 60px;
+	margin-inline: auto;
+}
+
+.footer-list {
+	margin-block: 3rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.footer-list a,
+.footer-list a:visited {
+	color: rgb(119, 128, 132);
+}
+
+.footer-list a:hover {
+	color: var(--primary-cyan);
+}
+
+.socials-section {
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-icon:hover {
+	opacity: 0.8;
+}
+
+@media screen and (min-width: 1080px) {
+	header {
+		background-image: linear-gradient(to bottom, transparent, #fff),
+			url("/images/bg-header-desktop.png");
+	}
+
+	.buttons {
+		flex-direction: row;
+	}
+
+	.btn {
+		max-width: 15rem;
+	}
+
+	.logo-section {
+		flex-direction: row;
+		gap: 4rem;
+		width: 15%;
+	}
+
+	.desktop-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 4rem;
+		max-width: 70rem;
+		margin-inline: auto;
+	}
+
+	.desktop-grid-item h2 {
+		font-size: 1.25rem;
+	}
+
+	.desktop-grid-item p {
+		font-size: 1rem;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 70rem;
+	}
+	.footer-logo {
+		margin-inline: 4rem 0;
+	}
+
+	.footer-list {
+		grid-template-columns: repeat(3, 1fr);
+		margin-right: auto;
+		margin-left: 8rem;
+		text-align: left;
+		column-gap: 3rem;
+		row-gap: 1rem;
+		font-size: 1rem;
+	}
+
+	.socials-section {
+		margin-inline: auto;
+	}
+
+	.desktop-snippets-sections {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.snippets-img {
+		transform: translateX(-100px);
+	}
+
+	.desktop-snippet {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+}
