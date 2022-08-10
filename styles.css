@@ -127,7 +127,7 @@ section p {
 /* Header section */
 
 header {
-	background-image: url("/images/bg-header-mobile.png");
+	background-image: url("images/bg-header-mobile.png");
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -247,7 +247,7 @@ footer {
 @media screen and (min-width: 1080px) {
 	header {
 		background-image: linear-gradient(to bottom, transparent, #fff),
-			url("/images/bg-header-desktop.png");
+			url("images/bg-header-desktop.png");
 	}
 
 	.buttons {
